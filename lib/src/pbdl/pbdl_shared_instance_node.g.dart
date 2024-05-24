@@ -11,10 +11,10 @@ PBDLSharedInstanceNode _$PBDLSharedInstanceNodeFromJson(
   return PBDLSharedInstanceNode(
     UUID: json['UUID'] as String,
     overrideValues: (json['overrideValues'] as List)
-        ?.map((e) => e == null
+        .map((e) => e == null
             ? null
             : PBDLOverrideValue.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     name: json['name'] as String,
     isVisible: json['isVisible'] as bool,
     boundaryRectangle: json['boundaryRectangle'] == null
@@ -60,7 +60,7 @@ Map<String, dynamic> _$PBDLSharedInstanceNodeToJson(
       'symbolID': instance.symbolID,
       'parameters': instance.parameters,
       'overrideValues':
-          instance.overrideValues?.map((e) => e?.toJson())?.toList(),
+          instance.overrideValues.map((e) => e?.toJson()).toList(),
       'sharedNodeSetID': instance.sharedNodeSetID,
       'pbdlType': instance.pbdlType,
     };

@@ -44,7 +44,7 @@ Map<String, dynamic> _$PBDLNodeToJson(PBDLNode instance) => <String, dynamic>{
       'pbdlType': instance.pbdlType,
       'style': instance.style?.toJson(),
       'prototypeNodeUUID': instance.prototypeNodeUUID,
-      'child': instance.child?.toJson(),
+      'child': instance.child.toJson(),
       'constraints': instance.constraints?.toJson(),
     };
 

@@ -9,13 +9,13 @@ part of 'gradient.dart';
 Gradient _$GradientFromJson(Map<String, dynamic> json) {
   return Gradient(
     classField: json['_class'] as String,
-    elipseLength: (json['elipseLength'] as num)?.toDouble(),
+    elipseLength: (json['elipseLength'] as num).toDouble(),
     from: json['from'] as String,
-    gradientType: (json['gradientType'] as num)?.toDouble(),
+    gradientType: (json['gradientType'] as num).toDouble(),
     stops: (json['stops'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : GradientStop.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     to: json['to'] as String,
   );
 }

@@ -32,7 +32,7 @@ MaterialColorScheme _$MaterialColorSchemeFromJson(Map<String, dynamic> json) {
         ? null
         : PBDLConstraints.fromJson(json['constraints'] as Map<String, dynamic>)
     ..supportedAttributes =
-        (json['supportedAttributes'] as List)?.map((e) => e as String)?.toSet();
+        (json['supportedAttributes'] as List).map((e) => e as String).toSet();
 }
 
 Map<String, dynamic> _$MaterialColorSchemeToJson(

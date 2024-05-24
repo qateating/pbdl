@@ -48,9 +48,7 @@ class PBDLNode implements Comparable<PBDLNode> {
   ///
   /// This is done in order to consistently generate PBDL files in the same order
   void sortByUUID() {
-    if (child != null) {
-      child.sortByUUID();
-    }
+    child.sortByUUID();
   }
 
   PBDLNode createPBDLNode(Map<String, dynamic> json) => PBDLNode.fromJson(json);

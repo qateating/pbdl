@@ -48,11 +48,9 @@ class Style {
     this.windingRule,
     TextStyle this.textStyle,
   }) {
-    if (shadows != null) {
-      this.shadows = null;
-      this.innerShadows = null;
-      hasShadow = true;
-    }
+    this.shadows = null;
+    this.innerShadows = null;
+    hasShadow = true;
   }
 
   factory Style.fromJson(Map json) => _$StyleFromJson(json);

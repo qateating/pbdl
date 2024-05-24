@@ -9,9 +9,9 @@ part of 'boolean_operation.dart';
 BooleanOperation _$BooleanOperationFromJson(Map<String, dynamic> json) {
   return BooleanOperation(
     children: (json['children'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : FigmaNode.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     booleanOperation: json['booleanOperation'] as String,
     absoluteBoundingBox: json['absoluteBoundingBox'] == null
         ? null
@@ -34,7 +34,7 @@ BooleanOperation _$BooleanOperationFromJson(Map<String, dynamic> json) {
     ..isVisible = json['visible'] as bool ?? true
     ..size = json['size']
     ..strokes = json['strokes']
-    ..strokeWeight = (json['strokeWeight'] as num)?.toDouble()
+    ..strokeWeight = (json['strokeWeight'] as num).toDouble()
     ..strokeAlign = json['strokeAlign'] as String
     ..styles = json['styles']
     ..type = json['type'] as String;

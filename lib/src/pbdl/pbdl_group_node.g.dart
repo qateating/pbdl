@@ -22,9 +22,9 @@ PBDLGroupNode _$PBDLGroupNodeFromJson(Map<String, dynamic> json) {
         ? null
         : PBDLStyle.fromJson(json['style'] as Map<String, dynamic>),
     children: (json['children'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLNode.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     prototypeNodeUUID: json['prototypeNodeUUID'] as String,
     layoutMainAxisSizing:
         PBDLNode.parentLayoutFromString(json['layoutMainAxisSizing'] as String),
@@ -46,7 +46,7 @@ Map<String, dynamic> _$PBDLGroupNodeToJson(PBDLGroupNode instance) =>
       'style': instance.style?.toJson(),
       'prototypeNodeUUID': instance.prototypeNodeUUID,
       'constraints': instance.constraints?.toJson(),
-      'children': instance.children?.map((e) => e?.toJson())?.toList(),
+      'children': instance.children.map((e) => e?.toJson()).toList(),
       'pbdlType': instance.pbdlType,
     };
 

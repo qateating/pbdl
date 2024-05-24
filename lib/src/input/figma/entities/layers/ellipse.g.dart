@@ -34,7 +34,7 @@ FigmaEllipse _$FigmaEllipseFromJson(Map<String, dynamic> json) {
         : FigmaRect.fromJson(
             json['absoluteBoundingBox'] as Map<String, dynamic>)
     ..strokes = json['strokes']
-    ..strokeWeight = (json['strokeWeight'] as num)?.toDouble()
+    ..strokeWeight = (json['strokeWeight'] as num).toDouble()
     ..strokeAlign = json['strokeAlign'] as String
     ..imageReference = json['imageReference'] as String;
 }

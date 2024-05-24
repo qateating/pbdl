@@ -5,7 +5,7 @@ class StyleHelper {
   /// Function that returns `true` if a particular FigmaNode should be exported as an image
   /// based on the [nodes] provided. Returns `false` otherwise.
   static bool isImage(List<StyleAdditionNode> nodes) {
-    if (nodes == null || nodes.isEmpty) {
+    if (nodes.isEmpty) {
       return false;
     }
     var seen = <StyleAdditionNode>[];

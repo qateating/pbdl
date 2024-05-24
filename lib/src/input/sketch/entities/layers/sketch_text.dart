@@ -142,7 +142,7 @@ class SketchText extends SketchNode implements SketchNodeFactory {
       maintainScrollPosition: maintainScrollPosition,
       style: style.interpretStyle(),
       content: content,
-      prototypeNodeUUID: flow?.destinationArtboardID,
+      prototypeNodeUUID: flow.destinationArtboardID,
     ));
   }
 

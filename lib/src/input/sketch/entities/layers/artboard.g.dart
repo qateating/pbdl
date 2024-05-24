@@ -25,9 +25,9 @@ Artboard _$ArtboardFromJson(Map<String, dynamic> json) {
     hasClickThrough: json['hasClickThrough'],
     groupLayout: json['groupLayout'],
     children: (json['layers'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : SketchNode.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     UUID: json['do_objectID'] as String,
     booleanOperation: json['booleanOperation'],
     exportOptions: json['exportOptions'],

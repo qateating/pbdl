@@ -9,11 +9,11 @@ part of 'pbdl_boundary_box.dart';
 PBDLBoundaryBox _$PBDLBoundaryBoxFromJson(Map<String, dynamic> json) {
   return PBDLBoundaryBox(
     constrainProportions: json['constrainProportions'] as bool,
-    x: (json['x'] as num)?.toDouble(),
-    y: (json['y'] as num)?.toDouble(),
-    z: (json['z'] as num)?.toDouble(),
-    width: (json['width'] as num)?.toDouble(),
-    height: (json['height'] as num)?.toDouble(),
+    x: (json['x'] as num).toDouble(),
+    y: (json['y'] as num).toDouble(),
+    z: (json['z'] as num).toDouble(),
+    width: (json['width'] as num).toDouble(),
+    height: (json['height'] as num).toDouble(),
     constraints: json['constraints'] == null
         ? null
         : PBDLConstraints.fromJson(json['constraints'] as Map<String, dynamic>),

@@ -11,9 +11,9 @@ SymbolMaster _$SymbolMasterFromJson(Map<String, dynamic> json) {
     hasClickThrough: json['hasClickThrough'] as bool,
     groupLayout: json['groupLayout'],
     children: (json['layers'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : SketchNode.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     UUID: json['do_objectID'] as String,
     booleanOperation: json['booleanOperation'],
     exportOptions: json['exportOptions'],
@@ -60,10 +60,10 @@ SymbolMaster _$SymbolMasterFromJson(Map<String, dynamic> json) {
     changeIdentifier: json['changeIdentifier'] as int,
     allowsOverrides: json['allowsOverrides'] as bool,
     overrideProperties: (json['overrideProperties'] as List)
-        ?.map((e) => e == null
+        .map((e) => e == null
             ? null
             : OverridableProperty.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     presetDictionary: json['presetDictionary'],
   )
     ..CLASS_NAME = json['CLASS_NAME'] as String

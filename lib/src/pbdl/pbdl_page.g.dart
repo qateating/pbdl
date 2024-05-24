@@ -11,9 +11,9 @@ PBDLPage _$PBDLPageFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     UUID: json['UUID'] as String,
     screens: (json['screens'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLNode.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     layoutMainAxisSizing:
         PBDLNode.parentLayoutFromString(json['layoutMainAxisSizing'] as String),
     layoutCrossAxisSizing: PBDLNode.parentLayoutFromString(
@@ -63,7 +63,7 @@ Map<String, dynamic> _$PBDLPageToJson(PBDLPage instance) {
 
   writeNotNull('imageURI', instance.imageURI);
   writeNotNull('convert', instance.convert);
-  writeNotNull('screens', instance.screens?.map((e) => e?.toJson())?.toList());
+  writeNotNull('screens', instance.screens.map((e) => e?.toJson()).toList());
   writeNotNull('pbdlType', instance.pbdlType);
   return val;
 }

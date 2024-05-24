@@ -8,12 +8,12 @@ part of 'color_controls.dart';
 
 ColorControls _$ColorControlsFromJson(Map<String, dynamic> json) {
   return ColorControls(
-    brightness: (json['brightness'] as num)?.toDouble(),
+    brightness: (json['brightness'] as num).toDouble(),
     classField: json['_class'] as String,
-    contrast: (json['contrast'] as num)?.toDouble(),
-    hue: (json['hue'] as num)?.toDouble(),
+    contrast: (json['contrast'] as num).toDouble(),
+    hue: (json['hue'] as num).toDouble(),
     isEnabled: json['isEnabled'] as bool,
-    saturation: (json['saturation'] as num)?.toDouble(),
+    saturation: (json['saturation'] as num).toDouble(),
   );
 }
 

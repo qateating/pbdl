@@ -23,11 +23,11 @@ PBDLTextStyle _$PBDLTextStyleFromJson(Map<String, dynamic> json) {
     textAlignVertical: json['textAlignVertical'] as String,
     letterSpacing: json['letterSpacing'] as num,
     fills: (json['fills'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLFill.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     hyperLink: json['hyperLink'] as String,
-    opentypeFlags: (json['opentypeFlags'] as Map<String, dynamic>)?.map(
+    opentypeFlags: (json['opentypeFlags'] as Map<String, dynamic>).map(
           (k, e) => MapEntry(k, e as num),
         ) ??
         {},
@@ -88,7 +88,7 @@ Map<String, dynamic> _$PBDLTextStyleToJson(PBDLTextStyle instance) =>
       'textAlignHorizontal': instance.textAlignHorizontal,
       'textAlignVertical': instance.textAlignVertical,
       'letterSpacing': instance.letterSpacing,
-      'fills': instance.fills?.map((e) => e?.toJson())?.toList(),
+      'fills': instance.fills.map((e) => e?.toJson()).toList(),
       'hyperLink': instance.hyperLink,
       'opentypeFlags': instance.opentypeFlags,
       'lineHeightPx': instance.lineHeightPx,

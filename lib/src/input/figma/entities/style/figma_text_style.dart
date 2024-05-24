@@ -102,7 +102,7 @@ class FigmaTextStyle extends FigmaBaseNode {
       textAlignHorizontal: textAlignHorizontal,
       textAlignVertical: textAlignVertical,
       letterSpacing: letterSpacing,
-      fills: fills?.map((fill) => fill.interpretFill())?.toList(),
+      fills: fills.map((fill) => fill.interpretFill()).toList(),
       hyperLink: hyperLink,
       opentypeFlags: opentypeFlags,
       lineHeightPx: lineHeightPx,

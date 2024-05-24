@@ -27,8 +27,7 @@ abstract class AssetProcessingService {
   }
 
   Future<void> uploadToStorage(Uint8List img, String name) async {
-    if (Platform.environment.containsKey(AzureAssetService.KEY_NAME) &&
-        aaService.projectUUID != null) {
+    if (Platform.environment.containsKey(AzureAssetService.KEY_NAME)) {
       // Upload image to storage
 
       var cont = await aaService.createContainer(

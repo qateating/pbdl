@@ -56,7 +56,7 @@ abstract class AbstractShapeLayer extends SketchNode {
             nameIsFixed,
             resizingConstraint,
             resizingType,
-            rotation?.toDouble(),
+            rotation.toDouble(),
             sharedStyleID,
             shouldBreakMaskChain,
             hasClippingMask,

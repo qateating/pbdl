@@ -100,7 +100,7 @@ class SymbolInstance extends SketchNode implements SketchNodeFactory {
             nameIsFixed,
             resizingConstraint,
             resizingType,
-            rotation?.toDouble(),
+            rotation.toDouble(),
             sharedStyleID,
             shouldBreakMaskChain,
             hasClippingMask,
@@ -184,7 +184,7 @@ class SymbolInstance extends SketchNode implements SketchNodeFactory {
       symbolID: symbolID,
       userInfo: userInfo,
       verticalSpacing: verticalSpacing,
-      prototypeNodeUUID: flow?.destinationArtboardID,
+      prototypeNodeUUID: flow.destinationArtboardID,
     ));
   }
 }

@@ -9,9 +9,9 @@ part of 'gradient_fill_type.dart';
 GradientFillType _$GradientFillTypeFromJson(Map<String, dynamic> json) {
   return GradientFillType(
     gradientStops: (json['gradientStops'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : GradientStop.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     gradientHandlePositions: GradientFillType._pointsFromJson(
         json['gradientHandlePositions'] as List),
     blendMode: json['blendMode'] as String,

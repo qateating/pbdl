@@ -102,7 +102,7 @@ class FigmaRectangle extends FigmaVector
         isVisible: isVisible,
         name: name,
         style: figmaStyleProperty.interpretStyle(),
-        child: await child?.interpretNode(),
+        child: await child.interpretNode(),
         fixedRadius: cornerRadius ?? 0,
         prototypeNodeUUID: transitionNodeID,
         constraints: constraints?.interpret(),

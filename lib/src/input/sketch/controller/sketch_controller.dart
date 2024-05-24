@@ -34,7 +34,7 @@ class SketchController {
       InputDesignService ids, Map pagesAndArtboards, projectName) {
     try {
       return SketchProject(ids, pagesAndArtboards, projectName);
-    } catch (e, stackTrace) {
+    } catch (e) {
       log.error(e.toString());
       return null;
     }
@@ -75,7 +75,7 @@ class SketchController {
           break;
         }
       }
-      var b = process?.kill();
+      var b = process.kill();
     }
   }
 }

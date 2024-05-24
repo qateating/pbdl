@@ -38,14 +38,14 @@ SymbolInstance _$SymbolInstanceFromJson(Map<String, dynamic> json) {
         : Style.fromJson(json['style'] as Map<String, dynamic>),
     maintainScrollPosition: json['maintainScrollPosition'] as bool,
     overrideValues: (json['overrideValues'] as List)
-        ?.map((e) => e == null
+        .map((e) => e == null
             ? null
             : OverridableValue.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    scale: (json['scale'] as num)?.toDouble(),
+        .toList(),
+    scale: (json['scale'] as num).toDouble(),
     symbolID: json['symbolID'] as String,
-    verticalSpacing: (json['verticalSpacing'] as num)?.toDouble(),
-    horizontalSpacing: (json['horizontalSpacing'] as num)?.toDouble(),
+    verticalSpacing: (json['verticalSpacing'] as num).toDouble(),
+    horizontalSpacing: (json['horizontalSpacing'] as num).toDouble(),
   )
     ..CLASS_NAME = json['CLASS_NAME'] as String
     ..type = json['_class'] as String

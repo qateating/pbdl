@@ -50,10 +50,8 @@ class PBDLFill {
 
   static List<Map> _pointsToJson(List<Point> points) {
     var maps = <Map>[];
-    if (points != null) {
-      for (var p in points) {
-        maps.add({'x': p.x, 'y': p.y});
-      }
+    for (var p in points) {
+      maps.add({'x': p.x, 'y': p.y});
     }
     return maps;
   }

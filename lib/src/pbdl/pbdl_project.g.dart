@@ -11,9 +11,9 @@ PBDLProject _$PBDLProjectFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     UUID: json['UUID'] as String,
     pages: (json['pages'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLPage.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     pngPath: json['pngPath'] as String,
     globalStyles: json['globalStyles'] == null
         ? null
@@ -45,13 +45,13 @@ PBDLProject _$PBDLProjectFromJson(Map<String, dynamic> json) {
         : PBDLConstraints.fromJson(json['constraints'] as Map<String, dynamic>)
     ..debug = json['debug'] as bool
     ..miscPages = (json['miscPages'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLPage.fromJson(e as Map<String, dynamic>))
-        ?.toList()
+        .toList()
     ..sharedStyles = (json['sharedStyles'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : SharedStyle.fromJson(e as Map<String, dynamic>))
-        ?.toList()
+        .toList()
     ..pbdlType = json['pbdlType'] as String;
 }
 
@@ -72,9 +72,9 @@ Map<String, dynamic> _$PBDLProjectToJson(PBDLProject instance) =>
       'debug': instance.debug,
       'pngPath': instance.pngPath,
       'designSystem': instance.designSystem?.toJson(),
-      'pages': instance.pages?.map((e) => e?.toJson())?.toList(),
-      'miscPages': instance.miscPages?.map((e) => e?.toJson())?.toList(),
-      'sharedStyles': instance.sharedStyles?.map((e) => e?.toJson())?.toList(),
+      'pages': instance.pages.map((e) => e?.toJson()).toList(),
+      'miscPages': instance.miscPages.map((e) => e?.toJson()).toList(),
+      'sharedStyles': instance.sharedStyles.map((e) => e?.toJson()).toList(),
       'globalStyles': instance.globalStyles?.toJson(),
       'pbdlType': instance.pbdlType,
     };

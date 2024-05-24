@@ -14,11 +14,11 @@ class FigmaKey {
     ///
     /// If neither personalAccessToken nor oAuthToken are provided,
     /// or they are both empty, an exception will be thrown.
-    if (oAuthToken != null && oAuthToken.isNotEmpty) {
+    if (oAuthToken.isNotEmpty) {
       keyStr =
           oAuthToken.contains('Bearer') ? oAuthToken : 'Bearer $oAuthToken';
       type = FIGMA_KEY_TYPE.OAUTH_TOKEN;
-    } else if (personalAccessToken != null && personalAccessToken.isNotEmpty) {
+    } else if (personalAccessToken.isNotEmpty) {
       keyStr = personalAccessToken;
       type = FIGMA_KEY_TYPE.PERSONAL_ACCESS_TOKEN;
     } else {

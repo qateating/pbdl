@@ -44,10 +44,9 @@ class FigmaAssetProcessor extends AssetProcessingService {
   }) {
     if (format == IMAGE_FORMAT.SVG) {
       _uuidSvgQueue.add(uuid);
-    } else if (absoluteBoundingBox != null &&
-        absoluteBoundingBox.height > 0 &&
+    } else if (absoluteBoundingBox.height > 0 &&
         absoluteBoundingBox.width > 0 &&
-        (effects == null || effects.isEmpty)) {
+        (effects.isEmpty)) {
       _uuidQueue.add(uuid);
     } else {
       _uuidNoBoxQueue.add(uuid);
@@ -148,7 +147,7 @@ class FigmaAssetProcessor extends AssetProcessingService {
         Map images = response['images'];
         // Download the images
         for (var entry in images.entries) {
-          if (entry?.value != null && (entry?.value?.isNotEmpty ?? false)) {
+          if (entry.value != null && (entry.value?.isNotEmpty ?? false)) {
             response =
                 await http.get(Uri.parse(entry.value)).then((imageRes) async {
               // Check if the request was successful

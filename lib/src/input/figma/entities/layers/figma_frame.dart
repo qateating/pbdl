@@ -135,9 +135,7 @@ class FigmaFrame extends FigmaChildrenNode
         );
 
         var tempPrototypeID = childrenHavePrototypeNode();
-        if (tempPrototypeID != null) {
-          transitionNodeID = tempPrototypeID;
-        }
+        transitionNodeID = tempPrototypeID;
 
         if (children != null && children.isNotEmpty) {
           absoluteBoundingBox = fitFrame();

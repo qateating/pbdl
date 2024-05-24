@@ -8,11 +8,11 @@ part of 'figma_rect.dart';
 
 FigmaRect _$FigmaRectFromJson(Map<String, dynamic> json) {
   return FigmaRect(
-    x: (json['x'] as num)?.toDouble(),
-    y: (json['y'] as num)?.toDouble(),
-    z: (json['z'] as num)?.toDouble(),
-    width: (json['width'] as num)?.toDouble(),
-    height: (json['height'] as num)?.toDouble(),
+    x: (json['x'] as num).toDouble(),
+    y: (json['y'] as num).toDouble(),
+    z: (json['z'] as num).toDouble(),
+    width: (json['width'] as num).toDouble(),
+    height: (json['height'] as num).toDouble(),
   );
 }
 

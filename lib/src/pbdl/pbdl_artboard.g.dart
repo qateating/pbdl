@@ -27,9 +27,9 @@ PBDLArtboard _$PBDLArtboardFromJson(Map<String, dynamic> json) {
         ? null
         : PBDLStyle.fromJson(json['style'] as Map<String, dynamic>),
     children: (json['children'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLNode.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     layoutMainAxisSizing:
         PBDLNode.parentLayoutFromString(json['layoutMainAxisSizing'] as String),
     layoutCrossAxisSizing: PBDLNode.parentLayoutFromString(
@@ -58,7 +58,7 @@ Map<String, dynamic> _$PBDLArtboardToJson(PBDLArtboard instance) =>
       'boundaryRectangle': instance.boundaryRectangle?.toJson(),
       'isFlowHome': instance.isFlowHome,
       'pbdlType': instance.pbdlType,
-      'children': instance.children?.map((e) => e?.toJson())?.toList(),
+      'children': instance.children.map((e) => e?.toJson()).toList(),
     };
 
 const _$ParentLayoutSizingEnumMap = {

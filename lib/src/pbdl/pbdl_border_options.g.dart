@@ -9,9 +9,9 @@ part of 'pbdl_border_options.dart';
 PBDLBorderOptions _$PBDLBorderOptionsFromJson(Map<String, dynamic> json) {
   return PBDLBorderOptions(
     borders: (json['borders'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLBorder.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     strokeWeight: json['strokeWeight'] as num,
     strokeAlign: json['strokeAlign'] as String,
     strokeJoin: json['strokeJoin'] as String,
@@ -22,7 +22,7 @@ PBDLBorderOptions _$PBDLBorderOptionsFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$PBDLBorderOptionsToJson(PBDLBorderOptions instance) =>
     <String, dynamic>{
-      'borders': instance.borders?.map((e) => e?.toJson())?.toList(),
+      'borders': instance.borders.map((e) => e.toJson()).toList(),
       'strokeWeight': instance.strokeWeight,
       'strokeAlign': instance.strokeAlign,
       'strokeJoin': instance.strokeJoin,

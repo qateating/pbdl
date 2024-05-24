@@ -12,7 +12,7 @@ GradientStop _$GradientStopFromJson(Map<String, dynamic> json) {
     color: json['color'] == null
         ? null
         : Color.fromJson(json['color'] as Map<String, dynamic>),
-    position: (json['position'] as num)?.toDouble(),
+    position: (json['position'] as num).toDouble(),
   );
 }
 

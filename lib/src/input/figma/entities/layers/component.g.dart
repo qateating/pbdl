@@ -27,9 +27,9 @@ Component _$ComponentFromJson(Map<String, dynamic> json) {
     verticalPadding: json['verticalPadding'],
     itemSpacing: json['itemSpacing'],
     children: (json['children'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : FigmaNode.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     backgroundColor: json['backgroundColor'] == null
         ? null
         : FigmaColor.fromJson(json['backgroundColor'] as Map<String, dynamic>),

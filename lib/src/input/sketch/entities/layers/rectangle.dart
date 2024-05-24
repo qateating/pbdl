@@ -149,6 +149,6 @@ class Rectangle extends AbstractShapeLayer
         userInfo: userInfo,
         maintainScrollPosition: maintainScrollPosition,
         style: style.interpretStyle(),
-        prototypeNodeUUID: flow?.destinationArtboardID));
+        prototypeNodeUUID: flow.destinationArtboardID));
   }
 }

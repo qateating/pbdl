@@ -11,9 +11,9 @@ Canvas _$CanvasFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     type: json['type'] as String,
     children: (json['children'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : FigmaNode.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     backgroundColor: json['backgroundColor'],
     prototypeStartNodeID: json['prototypeStartNodeID'],
     prototypeDevice: json['prototypeDevice'],

@@ -34,7 +34,7 @@ FigmaVector _$FigmaVectorFromJson(Map<String, dynamic> json) {
         : FigmaNode.fromJson(json['child'] as Map<String, dynamic>)
     ..isVisible = json['visible'] as bool ?? true
     ..strokes = json['strokes']
-    ..strokeWeight = (json['strokeWeight'] as num)?.toDouble()
+    ..strokeWeight = (json['strokeWeight'] as num).toDouble()
     ..strokeAlign = json['strokeAlign'] as String
     ..imageReference = json['imageReference'] as String;
 }

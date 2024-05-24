@@ -145,7 +145,7 @@ class Triangle extends AbstractShapeLayer implements SketchNodeFactory {
       maintainScrollPosition: maintainScrollPosition,
       style: style.interpretStyle(),
       imageReference: ref,
-      prototypeNodeUUID: flow?.destinationArtboardID,
+      prototypeNodeUUID: flow.destinationArtboardID,
     ));
   }
 }

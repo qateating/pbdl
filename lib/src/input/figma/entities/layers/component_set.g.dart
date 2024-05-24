@@ -28,9 +28,9 @@ FigmaComponentSet _$FigmaComponentSetFromJson(Map<String, dynamic> json) {
     ..transitionDuration = json['transitionDuration'] as num
     ..transitionEasing = json['transitionEasing'] as String
     ..children = (json['children'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : FigmaNode.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        .toList();
 }
 
 Map<String, dynamic> _$FigmaComponentSetToJson(FigmaComponentSet instance) =>

@@ -46,7 +46,7 @@ class FigmaPage {
   factory FigmaPage.fromPBDF(Map<String, dynamic> json) {
     var page = FigmaPage(name: json['name'], id: json['id']);
     if (json.containsKey('screens')) {
-      (json['screens'] as List)?.forEach((value) {
+      (json['screens'] as List).forEach((value) {
         if (value != null && (value['convert'] ?? true)) {
           page.screens.add(FigmaScreen.fromJson(value as Map<String, dynamic>));
         }
@@ -57,7 +57,7 @@ class FigmaPage {
 
   Future<PBDLPage> interpretNode() async {
     var resultScreens = await Future.wait(
-        screens.map((e) async => await e?.interpretNode())?.toList());
+        screens.map((e) async => await e.interpretNode()).toList());
     return PBDLPage(
       name: name,
       UUID: id,

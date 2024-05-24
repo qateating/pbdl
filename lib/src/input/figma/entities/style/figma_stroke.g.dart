@@ -9,10 +9,10 @@ part of 'figma_stroke.dart';
 FigmaStroke _$FigmaStrokeFromJson(Map<String, dynamic> json) {
   return FigmaStroke(
     strokes: (json['strokes'] as List)
-        ?.map((e) => e == null
+        .map((e) => e == null
             ? null
             : FigmaListStroke.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     strokeWeight: json['strokeWeight'] as num,
     strokeAlign: json['strokeAlign'] as String,
     strokeJoin: json['strokeJoin'] as String,

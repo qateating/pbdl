@@ -9,16 +9,16 @@ part of 'figma_style_property.dart';
 FigmaStyleProperty _$FigmaStylePropertyFromJson(Map<String, dynamic> json) {
   return FigmaStyleProperty(
     fills: (json['fills'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : FigmaFill.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     stroke: json['stroke'] == null
         ? null
         : FigmaStroke.fromJson(json['stroke'] as Map<String, dynamic>),
     effects: (json['effects'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : FigmaEffect.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     clipsContent: json['clipsContent'] as bool,
   );
 }

@@ -58,7 +58,7 @@ class SketchAssetProcessor extends AssetProcessingService {
       }
 
       return response?.bodyBytes;
-    } catch (e, stackTrace) {
+    } catch (e) {
       var imageErr = File(
               '${MainInfo().cwd.path}/lib/src/input/assets/image-conversion-error.png')
           .readAsBytesSync();

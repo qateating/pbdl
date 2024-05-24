@@ -60,7 +60,7 @@ Map<String, dynamic> _$PBDLBooleanOperationToJson(
       'strokeAlign': instance.strokeAlign,
       'styles': instance.styles,
       'fillsList': instance.fillsList,
-      'children': instance.children?.map((e) => e?.toJson())?.toList(),
+      'children': instance.children.map((e) => e?.toJson()).toList(),
       'booleanOperation': instance.booleanOperation,
       'pbdlType': instance.pbdlType,
       'boundaryRectangle': instance.boundaryRectangle?.toJson(),

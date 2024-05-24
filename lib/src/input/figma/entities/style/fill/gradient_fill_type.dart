@@ -71,7 +71,7 @@ class GradientFillType implements FigmaFill {
       blendMode: blendMode,
       type: type,
       isEnabled: visible,
-      color: color?.interpretColor(),
+      color: color.interpretColor(),
       gradientStops: gradientStops
           .map((gradientStop) => gradientStop.interpretGradientStop())
           .toList(),

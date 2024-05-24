@@ -24,7 +24,7 @@ class PBDLColor {
   Map<String, dynamic> toJson() => _$PBDLColorToJson(this);
 
   String toHex() {
-    if (a != null && b != null && g != null && r != null) {
+    if (b != null) {
       int a, r, g, b;
       a = ((this.a ?? 0) * 255).round();
       r = ((this.r ?? 0) * 255).round();

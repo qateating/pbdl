@@ -185,7 +185,7 @@ class SymbolMaster extends AbstractGroupLayer implements SketchNodeFactory {
       // Find the child that contains the default value
       var overrideChild = _traverseChildrenForOverride(uuidTypeMap['uuid']);
 
-      if (ovrType != null && overrideChild != null) {
+      if (ovrType != null) {
         return PBDLOverrideProperty(
           uuidTypeMap['uuid'],
           overrideChild.name,

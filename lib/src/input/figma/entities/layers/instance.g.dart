@@ -29,9 +29,9 @@ Instance _$InstanceFromJson(Map<String, dynamic> json) {
     itemSpacing: json['itemSpacing'],
     componentId: json['componentId'] as String,
     children: (json['children'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : FigmaNode.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     parameters: json['parameters'] as List,
     backgroundColor: json['backgroundColor'] == null
         ? null
@@ -51,10 +51,10 @@ Instance _$InstanceFromJson(Map<String, dynamic> json) {
     ..isFlowHome = json['isFlowHome'] as bool ?? false
     ..imageReference = json['imageReference'] as String
     ..overrideValues = (json['overrideValues'] as List)
-        ?.map((e) => e == null
+        .map((e) => e == null
             ? null
             : FigmaOverridableValue.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        .toList();
 }
 
 Map<String, dynamic> _$InstanceToJson(Instance instance) => <String, dynamic>{
@@ -80,12 +80,12 @@ Map<String, dynamic> _$InstanceToJson(Instance instance) => <String, dynamic>{
       'horizontalPadding': instance.horizontalPadding,
       'verticalPadding': instance.verticalPadding,
       'itemSpacing': instance.itemSpacing,
-      'backgroundColor': instance.backgroundColor?.toJson(),
+      'backgroundColor': instance.backgroundColor.toJson(),
       'isFlowHome': instance.isFlowHome,
       'imageReference': instance.imageReference,
       'type': instance.type,
       'parameters': instance.parameters,
       'componentId': instance.componentId,
       'overrideValues':
-          instance.overrideValues?.map((e) => e?.toJson())?.toList(),
+          instance.overrideValues.map((e) => e.toJson()).toList(),
     };

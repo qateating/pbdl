@@ -37,7 +37,7 @@ class PBDL {
     bool exportPbdlJson = false,
   }) async {
     return await runZonedGuarded(() async {
-      if (pngPath == null || pngPath.isEmpty) {
+      if (pngPath.isEmpty) {
         pngPath = outputPath;
       }
 
@@ -99,7 +99,7 @@ class PBDL {
 
       getIt.registerSingleton(GlobalStyleHolder(designSystem));
 
-      if (pngPath == null || pngPath.isEmpty) {
+      if (pngPath.isEmpty) {
         pngPath = outputPath;
       }
 
@@ -149,7 +149,7 @@ class PBDL {
   /// Normalizes `absPath` if non-null and non-empty.
   /// Otherwise, returns current path
   static String _normalizedPath(String absPath) {
-    if (absPath != null && absPath.isNotEmpty) {
+    if (absPath.isNotEmpty) {
       return p.normalize(p.absolute(p.join(absPath)));
     }
     return p.join(Directory.current.path);

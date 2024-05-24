@@ -31,12 +31,12 @@ MaterialDesign3 _$MaterialDesign3FromJson(Map<String, dynamic> json) {
         ? null
         : PBDLConstraints.fromJson(json['constraints'] as Map<String, dynamic>)
     ..textStyles =
-        (json['textStyles'] as List)?.map((e) => e as String)?.toList()
+        (json['textStyles'] as List).map((e) => e as String).toList()
     ..colorSchemes = (json['colorSchemes'] as List)
-        ?.map((e) => e == null
+        .map((e) => e == null
             ? null
             : DesignSystemColorScheme.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        .toList();
 }
 
 Map<String, dynamic> _$MaterialDesign3ToJson(MaterialDesign3 instance) =>

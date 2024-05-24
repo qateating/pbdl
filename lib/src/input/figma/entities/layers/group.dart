@@ -95,9 +95,7 @@ class Group extends FigmaFrame implements AbstractFigmaNodeFactory {
       );
 
       var tempPrototypeID = childrenHavePrototypeNode();
-      if (tempPrototypeID != null) {
-        transitionNodeID = tempPrototypeID;
-      }
+      transitionNodeID = tempPrototypeID;
 
       if (children != null && children.isNotEmpty) {
         absoluteBoundingBox = fitFrame();

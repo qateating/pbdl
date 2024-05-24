@@ -23,11 +23,11 @@ FigmaTextStyle _$FigmaTextStyleFromJson(Map<String, dynamic> json) {
     textAlignVertical: json['textAlignVertical'] as String,
     letterSpacing: json['letterSpacing'] as num,
     fills: (json['fills'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : FigmaFill.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     hyperLink: json['hyperLink'] as String,
-    opentypeFlags: (json['opentypeFlags'] as Map<String, dynamic>)?.map(
+    opentypeFlags: (json['opentypeFlags'] as Map<String, dynamic>).map(
           (k, e) => MapEntry(k, e as num),
         ) ??
         {},

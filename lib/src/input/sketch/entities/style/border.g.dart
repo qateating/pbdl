@@ -16,13 +16,13 @@ Border _$BorderFromJson(Map<String, dynamic> json) {
         ? null
         : ContextSettings.fromJson(
             json['contextSettings'] as Map<String, dynamic>),
-    fillType: (json['fillType'] as num)?.toDouble(),
+    fillType: (json['fillType'] as num).toDouble(),
     gradient: json['gradient'] == null
         ? null
         : Gradient.fromJson(json['gradient'] as Map<String, dynamic>),
     isEnabled: json['isEnabled'] as bool,
-    position: (json['position'] as num)?.toDouble(),
-    thickness: (json['thickness'] as num)?.toDouble(),
+    position: (json['position'] as num).toDouble(),
+    thickness: (json['thickness'] as num).toDouble(),
   );
 }
 

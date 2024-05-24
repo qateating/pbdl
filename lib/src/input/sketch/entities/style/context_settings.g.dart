@@ -8,9 +8,9 @@ part of 'context_settings.dart';
 
 ContextSettings _$ContextSettingsFromJson(Map<String, dynamic> json) {
   return ContextSettings(
-    blendMode: (json['blendMode'] as num)?.toDouble(),
+    blendMode: (json['blendMode'] as num).toDouble(),
     classField: json['_class'] as String,
-    opacity: (json['opacity'] as num)?.toDouble(),
+    opacity: (json['opacity'] as num).toDouble(),
   );
 }
 

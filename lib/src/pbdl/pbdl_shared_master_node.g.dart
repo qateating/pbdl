@@ -10,10 +10,10 @@ PBDLSharedMasterNode _$PBDLSharedMasterNodeFromJson(Map<String, dynamic> json) {
   return PBDLSharedMasterNode(
     UUID: json['UUID'] as String,
     overrideProperties: (json['overrideProperties'] as List)
-        ?.map((e) => e == null
+        .map((e) => e == null
             ? null
             : PBDLOverrideProperty.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     name: json['name'] as String,
     isVisible: json['isVisible'] as bool,
     boundaryRectangle: json['boundaryRectangle'] == null
@@ -27,9 +27,9 @@ PBDLSharedMasterNode _$PBDLSharedMasterNodeFromJson(Map<String, dynamic> json) {
     constraints: json['constraints'],
     symbolID: json['symbolID'] as String,
     children: (json['children'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLNode.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     layoutMainAxisSizing:
         PBDLNode.parentLayoutFromString(json['layoutMainAxisSizing'] as String),
     layoutCrossAxisSizing: PBDLNode.parentLayoutFromString(
@@ -60,8 +60,8 @@ Map<String, dynamic> _$PBDLSharedMasterNodeToJson(
       'constraints': instance.constraints?.toJson(),
       'symbolID': instance.symbolID,
       'overrideProperties':
-          instance.overrideProperties?.map((e) => e?.toJson())?.toList(),
-      'children': instance.children?.map((e) => e?.toJson())?.toList(),
+          instance.overrideProperties.map((e) => e?.toJson()).toList(),
+      'children': instance.children.map((e) => e?.toJson()).toList(),
       'pbdlType': instance.pbdlType,
       'componentSetName': instance.componentSetName,
       'sharedNodeSetID': instance.sharedNodeSetID,

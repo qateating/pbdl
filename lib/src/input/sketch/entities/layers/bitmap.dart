@@ -78,7 +78,7 @@ class Bitmap extends SketchNode implements SketchNodeFactory {
             nameIsFixed,
             resizingConstraint,
             resizingType,
-            rotation?.toDouble(),
+            rotation.toDouble(),
             sharedStyleID,
             shouldBreakMaskChain,
             hasClippingMask,
@@ -123,7 +123,7 @@ class Bitmap extends SketchNode implements SketchNodeFactory {
       userInfo: userInfo,
       maintainScrollPosition: maintainScrollPosition,
       style: style.interpretStyle(),
-      prototypeNodeUUID: flow?.destinationArtboardID,
+      prototypeNodeUUID: flow.destinationArtboardID,
     ));
   }
 

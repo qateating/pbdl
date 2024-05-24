@@ -1,6 +1,5 @@
 import 'package:pbdl/src/pbdl/pbdl_screen.dart';
 
-import '../entities/abstract_sketch_node_factory.dart';
 import '../entities/layers/sketch_node.dart';
 
 class SketchScreen {

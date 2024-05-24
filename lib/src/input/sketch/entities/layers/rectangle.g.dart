@@ -8,7 +8,7 @@ part of 'rectangle.dart';
 
 Rectangle _$RectangleFromJson(Map<String, dynamic> json) {
   return Rectangle(
-    fixedRadius: (json['fixedRadius'] as num)?.toDouble(),
+    fixedRadius: (json['fixedRadius'] as num).toDouble(),
     hasConvertedToNewRoundCorners:
         json['hasConvertedToNewRoundCorners'] as bool,
     needsConvertionToNewRoundCorners:

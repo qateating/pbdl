@@ -24,13 +24,13 @@ FigmaFrame _$FigmaFrameFromJson(Map<String, dynamic> json) {
     layoutAlign: json['layoutAlign'],
     layoutGrow: json['layoutGrow'],
     size: json['size'],
-    horizontalPadding: (json['horizontalPadding'] as num)?.toDouble(),
-    verticalPadding: (json['verticalPadding'] as num)?.toDouble(),
-    itemSpacing: (json['itemSpacing'] as num)?.toDouble(),
+    horizontalPadding: (json['horizontalPadding'] as num).toDouble(),
+    verticalPadding: (json['verticalPadding'] as num).toDouble(),
+    itemSpacing: (json['itemSpacing'] as num).toDouble(),
     children: (json['children'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : FigmaNode.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     UUID: json['id'] as String,
     backgroundColor: json['backgroundColor'] == null
         ? null
@@ -43,9 +43,9 @@ FigmaFrame _$FigmaFrameFromJson(Map<String, dynamic> json) {
         ? null
         : FigmaNode.fromJson(json['child'] as Map<String, dynamic>)
     ..strokes = json['strokes']
-    ..strokeWeight = (json['strokeWeight'] as num)?.toDouble()
+    ..strokeWeight = (json['strokeWeight'] as num).toDouble()
     ..strokeAlign = json['strokeAlign'] as String
-    ..cornerRadius = (json['cornerRadius'] as num)?.toDouble()
+    ..cornerRadius = (json['cornerRadius'] as num).toDouble()
     ..isFlowHome = json['isFlowHome'] as bool ?? false
     ..imageReference = json['imageReference'] as String;
 }
@@ -74,7 +74,7 @@ Map<String, dynamic> _$FigmaFrameToJson(FigmaFrame instance) =>
       'horizontalPadding': instance.horizontalPadding,
       'verticalPadding': instance.verticalPadding,
       'itemSpacing': instance.itemSpacing,
-      'backgroundColor': instance.backgroundColor?.toJson(),
+      'backgroundColor': instance.backgroundColor.toJson(),
       'type': instance.type,
       'isFlowHome': instance.isFlowHome,
       'imageReference': instance.imageReference,

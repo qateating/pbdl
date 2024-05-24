@@ -15,10 +15,10 @@ Document _$DocumentFromJson(Map<String, dynamic> json) {
     json['currentPageIndex'],
     json['foreignLayerStyles'] as List,
     (json['foreignSymbols'] as List)
-        ?.map((e) => e == null
+        .map((e) => e == null
             ? null
             : ForeignSymbol.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     json['foreignTextStyles'] as List,
     json['layerStyles'],
     json['layerTextStyles'],

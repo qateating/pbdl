@@ -73,7 +73,7 @@ class SketchProject {
       }
 
       return sharedStyles;
-    } catch (e, stackTrace) {
+    } catch (e) {
       log.error(e.toString());
       return null;
     }
@@ -95,7 +95,7 @@ class SketchProject {
         ));
       }
       return pg;
-    } catch (e, stackTrace) {
+    } catch (e) {
       log.error(e.toString());
       return null;
     }

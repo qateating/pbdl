@@ -22,9 +22,9 @@ PBDLFrame _$PBDLFrameFromJson(Map<String, dynamic> json) {
         ? null
         : PBDLStyle.fromJson(json['style'] as Map<String, dynamic>),
     children: (json['children'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLNode.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     prototypeNodeUUID: json['prototypeNodeUUID'] as String,
     fixedRadius: json['fixedRadius'] as num,
     background: json['background'] as Map<String, dynamic>,
@@ -51,7 +51,7 @@ Map<String, dynamic> _$PBDLFrameToJson(PBDLFrame instance) => <String, dynamic>{
       'style': instance.style?.toJson(),
       'prototypeNodeUUID': instance.prototypeNodeUUID,
       'constraints': instance.constraints?.toJson(),
-      'children': instance.children?.map((e) => e?.toJson())?.toList(),
+      'children': instance.children.map((e) => e?.toJson()).toList(),
       'pbdlType': instance.pbdlType,
       'fixedRadius': instance.fixedRadius,
       'background': instance.background,
@@ -85,9 +85,9 @@ PBDLRow _$PBDLRowFromJson(Map<String, dynamic> json) {
         ? null
         : PBDLConstraints.fromJson(json['constraints'] as Map<String, dynamic>)
     ..children = (json['children'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLNode.fromJson(e as Map<String, dynamic>))
-        ?.toList()
+        .toList()
     ..fixedRadius = json['fixedRadius'] as num
     ..background = json['background'] as Map<String, dynamic>
     ..autoLayoutOptions = json['autoLayoutOptions'] == null
@@ -109,7 +109,7 @@ Map<String, dynamic> _$PBDLRowToJson(PBDLRow instance) => <String, dynamic>{
       'style': instance.style?.toJson(),
       'prototypeNodeUUID': instance.prototypeNodeUUID,
       'constraints': instance.constraints?.toJson(),
-      'children': instance.children?.map((e) => e?.toJson())?.toList(),
+      'children': instance.children.map((e) => e?.toJson()).toList(),
       'fixedRadius': instance.fixedRadius,
       'background': instance.background,
       'autoLayoutOptions': instance.autoLayoutOptions?.toJson(),
@@ -137,9 +137,9 @@ PBDLCol _$PBDLColFromJson(Map<String, dynamic> json) {
         ? null
         : PBDLConstraints.fromJson(json['constraints'] as Map<String, dynamic>)
     ..children = (json['children'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLNode.fromJson(e as Map<String, dynamic>))
-        ?.toList()
+        .toList()
     ..fixedRadius = json['fixedRadius'] as num
     ..background = json['background'] as Map<String, dynamic>
     ..autoLayoutOptions = json['autoLayoutOptions'] == null
@@ -161,7 +161,7 @@ Map<String, dynamic> _$PBDLColToJson(PBDLCol instance) => <String, dynamic>{
       'style': instance.style?.toJson(),
       'prototypeNodeUUID': instance.prototypeNodeUUID,
       'constraints': instance.constraints?.toJson(),
-      'children': instance.children?.map((e) => e?.toJson())?.toList(),
+      'children': instance.children.map((e) => e?.toJson()).toList(),
       'fixedRadius': instance.fixedRadius,
       'background': instance.background,
       'autoLayoutOptions': instance.autoLayoutOptions?.toJson(),

@@ -11,10 +11,10 @@ Blur _$BlurFromJson(Map<String, dynamic> json) {
     center: json['center'] as String,
     classField: json['_class'] as String,
     isEnabled: json['isEnabled'] as bool,
-    motionAngle: (json['motionAngle'] as num)?.toDouble(),
-    radius: (json['radius'] as num)?.toDouble(),
-    saturation: (json['saturation'] as num)?.toDouble(),
-    type: (json['type'] as num)?.toDouble(),
+    motionAngle: (json['motionAngle'] as num).toDouble(),
+    radius: (json['radius'] as num).toDouble(),
+    saturation: (json['saturation'] as num).toDouble(),
+    type: (json['type'] as num).toDouble(),
   );
 }
 

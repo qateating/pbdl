@@ -45,7 +45,7 @@ class SketchPage {
   factory SketchPage.fromJson(Map<String, dynamic> json) {
     var page = SketchPage(name: json['name'], id: json['id']);
     if (json.containsKey('screens')) {
-      (json['screens'] as List)?.forEach((value) {
+      (json['screens'] as List).forEach((value) {
         if (value != null && (value['convert'] ?? true)) {
           page.screens
               .add(SketchScreen.fromJson(value as Map<String, dynamic>));

@@ -1,4 +1,3 @@
-import '../objects/sketch_rect.dart';
 import '../style/style.dart';
 import 'sketch_node.dart';
 import 'flow.dart';
@@ -52,7 +51,7 @@ abstract class AbstractGroupLayer extends SketchNode {
             nameIsFixed,
             resizingConstraint,
             resizingType,
-            rotation?.toDouble(),
+            rotation.toDouble(),
             sharedStyleID,
             shouldBreakMaskChain,
             hasClippingMask,

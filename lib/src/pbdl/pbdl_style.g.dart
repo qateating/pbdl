@@ -9,9 +9,9 @@ part of 'pbdl_style.dart';
 PBDLStyle _$PBDLStyleFromJson(Map<String, dynamic> json) {
   return PBDLStyle(
     fills: (json['fills'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLFill.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     borderOptions: json['borderOptions'] == null
         ? null
         : PBDLBorderOptions.fromJson(
@@ -20,9 +20,9 @@ PBDLStyle _$PBDLStyleFromJson(Map<String, dynamic> json) {
         ? null
         : PBDLTextStyle.fromJson(json['textStyle'] as Map<String, dynamic>),
     effects: (json['effects'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : PBDLEffect.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     clipsContent: json['clipsContent'] as bool,
   )
     ..UUID = json['UUID'] as String
@@ -62,9 +62,9 @@ Map<String, dynamic> _$PBDLStyleToJson(PBDLStyle instance) => <String, dynamic>{
       'prototypeNodeUUID': instance.prototypeNodeUUID,
       'child': instance.child?.toJson(),
       'constraints': instance.constraints?.toJson(),
-      'fills': instance.fills?.map((e) => e?.toJson())?.toList(),
+      'fills': instance.fills.map((e) => e?.toJson()).toList(),
       'borderOptions': instance.borderOptions?.toJson(),
-      'effects': instance.effects?.map((e) => e?.toJson())?.toList(),
+      'effects': instance.effects.map((e) => e?.toJson()).toList(),
       'textStyle': instance.textStyle?.toJson(),
       'clipsContent': instance.clipsContent,
       'pbdlType': instance.pbdlType,

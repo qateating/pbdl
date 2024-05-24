@@ -8,10 +8,10 @@ part of 'pbdl_color.dart';
 
 PBDLColor _$PBDLColorFromJson(Map<String, dynamic> json) {
   return PBDLColor(
-    (json['a'] as num)?.toDouble(),
-    (json['r'] as num)?.toDouble(),
-    (json['g'] as num)?.toDouble(),
-    (json['b'] as num)?.toDouble(),
+    (json['a'] as num).toDouble(),
+    (json['r'] as num).toDouble(),
+    (json['g'] as num).toDouble(),
+    (json['b'] as num).toDouble(),
   );
 }
 

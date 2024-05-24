@@ -22,7 +22,7 @@ class AzureAssetService {
   String getImageURI(String imageName) => getContainerUri() + '/${imageName}';
 
   String getContainerUri() {
-    if (Platform.environment.containsKey(KEY_NAME) && projectUUID != null) {
+    if (Platform.environment.containsKey(KEY_NAME)) {
       var storageStringList = Platform.environment[KEY_NAME].split(';');
       var protocol = storageStringList[0].split('=')[1];
       var accName = storageStringList[1].split('=')[1];

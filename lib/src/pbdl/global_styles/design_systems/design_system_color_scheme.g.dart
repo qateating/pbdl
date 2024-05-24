@@ -22,7 +22,7 @@ Map<String, dynamic> _$DesignSystemColorSchemeToJson(
       'prototypeNodeUUID': instance.prototypeNodeUUID,
       'child': instance.child,
       'constraints': instance.constraints,
-      'supportedAttributes': instance.supportedAttributes?.toList(),
+      'supportedAttributes': instance.supportedAttributes.toList(),
     };
 
 const _$ParentLayoutSizingEnumMap = {

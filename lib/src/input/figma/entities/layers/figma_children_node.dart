@@ -33,8 +33,8 @@ class FigmaChildrenNode extends FigmaNode {
           layoutGrow: layoutGrow,
         ) {
     // Remove elements that are [null], which are unsupported nodes
-    children?.removeWhere((element) => element == null);
-    for (var i = 0; i < (children?.length ?? 0); i++) {
+    children.removeWhere((element) => element == null);
+    for (var i = 0; i < (children.length ?? 0); i++) {
       children[i]?.absoluteBoundingBox?.z = i * 1.0;
     }
   }

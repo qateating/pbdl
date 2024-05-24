@@ -80,14 +80,14 @@ class TextStyle {
     for (var s in STYLES) {
       if (fontDescriptor.fontName.contains(s)) {
         // this is really a mapping of style to weight
-        (fontDescriptor as FontDescriptor).fontWeight =
+        (fontDescriptor).fontWeight =
             fontInfo[s]['fontWeight'];
         // this is only normal, italic style
-        (fontDescriptor as FontDescriptor).fontStyle = fontInfo[s]['fontStyle'];
+        (fontDescriptor).fontStyle = fontInfo[s]['fontStyle'];
         // this is really fontFamily with removal of -XXX font type name suffix
-        (fontDescriptor as FontDescriptor).fontName =
+        (fontDescriptor).fontName =
             fontDescriptor.fontName.replaceFirst('-$s', '');
-        (fontDescriptor as FontDescriptor).letterSpacing =
+        (fontDescriptor).letterSpacing =
             rawEncodedAttributes['kerning'] ?? 0.0;
         break;
       }

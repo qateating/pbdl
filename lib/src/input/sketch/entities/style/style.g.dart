@@ -15,9 +15,9 @@ Style _$StyleFromJson(Map<String, dynamic> json) {
         ? null
         : BorderOptions.fromJson(json['borderOptions'] as Map<String, dynamic>),
     borders: (json['borders'] as List)
-        ?.map((e) =>
+        .map((e) =>
             e == null ? null : Border.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     classField: json['_class'] as String,
     colorControls: json['colorControls'] == null
         ? null
@@ -29,18 +29,18 @@ Style _$StyleFromJson(Map<String, dynamic> json) {
     UUID: json['do_objectID'] as String,
     endMarkerType: json['endMarkerType'] as int,
     fills: (json['fills'] as List)
-        ?.map(
+        .map(
             (e) => e == null ? null : Fill.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     innerShadows: (json['innerShadows'] as List)
-        ?.map(
+        .map(
             (e) => e == null ? null : Fill.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     miterLimit: json['miterLimit'] as int,
     shadows: (json['shadows'] as List)
-        ?.map(
+        .map(
             (e) => e == null ? null : Fill.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
     startMarkerType: json['startMarkerType'] as int,
     windingRule: json['windingRule'] as int,
     textStyle: json['textStyle'] == null

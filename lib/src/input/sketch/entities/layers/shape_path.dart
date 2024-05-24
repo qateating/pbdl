@@ -144,7 +144,7 @@ class ShapePath extends AbstractShapeLayer implements SketchNodeFactory {
       maintainScrollPosition: maintainScrollPosition,
       style: style.interpretStyle(),
       imageReference: ref,
-      prototypeNodeUUID: flow?.destinationArtboardID,
+      prototypeNodeUUID: flow.destinationArtboardID,
     ));
 /*
     return Future.value(InheritedShapePath(this, name,
